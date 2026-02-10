@@ -2,12 +2,13 @@
 import random
 number = random.randint(-10000, 10000)
 
-# Son rəqəmi düzgün hesablamaq (mənfi ədədlər daxil)
-if number >= 0:
-    last_digit = number % 10
+# Mənfi ədədlər üçün riyazi olaraq sonuncu rəqəmi tapırıq
+if number < 0:
+    last_digit = number % -10
 else:
-    last_digit = ((number * -1) % 10) * -1
+    last_digit = number % 10
 
+# Tapşırığın tələb etdiyi formatda çap edirik
 print(f"Last digit of {number} is {last_digit}", end=" ")
 
 if last_digit > 5:
